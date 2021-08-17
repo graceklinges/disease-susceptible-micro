@@ -2,10 +2,10 @@
 Microbiome analysis for disease susceptible Acropora cervicornis genotype 50 upon exposure to various nutrient constituents.
 
 Different measures of abundance reveal that phosphate enrichment induces increased dominance of the parasite Aquarickettsia in the coral Acropora cervicornis
-J. Grace Klinges
-Shalvi H. Patel
-William C. Duke
-Erinn M. Muller
+J. Grace Klinges,
+Shalvi H. Patel,
+William C. Duke,
+Erinn M. Muller,
 Rebecca L. Vega Thurber
 
 Submitted: FEMS Microbiology Ecology August 2021
