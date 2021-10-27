@@ -128,20 +128,3 @@ ps_rel <- transform(ps_rarefied, "compositional")
 save(ps, file = "ps_rename_g50.RData") #unrarefied, pruned
 save(ps_rel, file = "ps_rel_g50.RData") #rel abundance, rarefied, pruned
 save(clr, file = "ps_clr_g50.RData") #clr transformed, pruned
-
-allTaxa = taxa_names(ps)
-allTaxa <- allTaxa[!(allTaxa %in% "ASV_1")]
-ps_no_rick = prune_taxa(allTaxa, ps)
-# new phyloseq object with just the taxa you kept.
-ps_no_rick
-save(ps_no_rick, file = "ps_no_rick.RData") #renamed data with no aquarickettsia
-rm(allTaxa)
-
-ps_rarefied_nr <- rarefy_even_depth(ps_no_rick, sample.size = 351, rngseed = 999) 
-ps_rarefied_nr
-sum(sample_sums(ps_rarefied_nr)) 
-sample_sums(ps_rarefied_nr)
-save(ps_no_rick, file = "ps_no_rick_rare.RData") #renamed, rarefied data with no aquarickettsia
-
-clr_no_rick <- microbiome::transform(ps_no_rick, 'clr')
-save(clr_no_rick, file = "clr_no_rick.RData") #renamed, clr transformed data with no aquarickettsia
