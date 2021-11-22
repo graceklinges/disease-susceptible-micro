@@ -53,14 +53,14 @@ for (i in 1:nrow(tax.clean)){
 
 
 tax_table(ps) <- as.matrix(tax.clean)
-
+summary(sample_sums(ps)) #min is 5098
 ps_rarefied <- rarefy_even_depth(ps, sample.size = 5098, rngseed = 999)
-ps_rarefied
-sum(sample_sums(ps_rarefied))
+ps_rarefied #1259 taxa
+sum(sample_sums(ps_rarefied)) 
 sample_sums(ps_rarefied)
 save(ps_rarefied, file = "ps_rare_g50.RData") #rarefied, unpruned
 
-load(file = "ps_pruned.RData") #pruned
+load(file = "ps_pruned_geno50.RData") #pruned
 
 mapfile = "Mapping-file-full-renamed.txt"
 map = import_qiime_sample_data(mapfile)
@@ -115,7 +115,7 @@ tax_table(ps) <- as.matrix(tax.clean)
 #CLR transform using microbiome package for beta div analyses
 #CLR transform applies a pseudocount of min(relative abundance)/2 
 #to exact zero relative abundance entries in OTU table before taking logs.
-clr <- microbiome::transform(ps, 'clr')
+clr <- microbiome::transform(ps, 'clr') #pruned, unrarefied, clr transformed
 
 ps_rarefied <- rarefy_even_depth(ps, sample.size = 5098, rngseed = 999) 
 ps_rarefied 
