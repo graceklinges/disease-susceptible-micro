@@ -8,11 +8,11 @@ library(ggpubr)
 library("gridExtra")
 library("cowplot")
 
-source("~/Mote_nutrient_experiment/scripts/ancom_v2.1.R") #sourced from https://github.com/FrederickHuangLin/ANCOM/tree/master/scripts
+source("~/ancom_v2.1.R") #sourced from https://github.com/FrederickHuangLin/ANCOM/tree/master/scripts
 setwd("~/Mote_nutrient_experiment/data")
 
-# load unrarefied, renamed data for differential abundance analysis
-load(file = "ps_g50.RData")
+# load unrarefied,pruned, renamed data for differential abundance analysis
+load(file = "ps_pruned_geno50.RData")
 sample_sums(ps)
 #remove negatives
 ps = subset_samples(ps, SampleID != "Negative")
