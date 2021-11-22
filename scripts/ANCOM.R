@@ -12,7 +12,7 @@ source("~/ancom_v2.1.R") #sourced from https://github.com/FrederickHuangLin/ANCO
 setwd("~/Mote_nutrient_experiment/data")
 
 # load unrarefied,pruned, renamed data for differential abundance analysis
-load(file = "ps_rename_g50.RData.RData")
+load(file = "ps_rename_g50.RData")
 sample_sums(ps)
 #remove negatives
 ps = subset_samples(ps, SampleID != "Negative")
