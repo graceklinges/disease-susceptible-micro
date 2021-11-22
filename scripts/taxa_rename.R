@@ -121,8 +121,10 @@ ps_rarefied <- rarefy_even_depth(ps, sample.size = 5098, rngseed = 999)
 ps_rarefied 
 sum(sample_sums(ps_rarefied)) 
 sample_sums(ps_rarefied)
+
 #relative abundance transform
-ps_rel <- transform(ps_rarefied, "compositional")
+ps_rel <- microbiome::transform(ps_rarefied, "compositional")
+
 
 # save ps objects
 save(ps, file = "ps_rename_g50.RData") #unrarefied, pruned
