@@ -50,9 +50,6 @@ sample_data(clr_no_rick) <- map
 levels(clr@sam_data$Nutrient_no_level) <- c("Ammonium", "Nitrate", "Phosphate", "Combined", "No Treatment", "T0")
 
 
-clr <- subset_samples(clr, SampleID != "LP-50-2-T0") #outlier
-clr_no_rick <- subset_samples(clr_no_rick, SampleID != "LP-50-2-T0") #outlier
-
 ### Calculate distance matrices
 # only calculating euclidean distance for clr transformed data because we have negative values, and with the clr transform we've moved our data into "real space"
 clr_euc <- phyloseq::distance(clr, method = "euclidean")
