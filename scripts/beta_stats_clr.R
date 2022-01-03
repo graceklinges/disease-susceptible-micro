@@ -4,6 +4,7 @@ library("usedist")
 library("ggplot2")
 library("microbiome")
 library("multcompView")
+library("reshape2")
 
 setwd("~/Mote_nutrient_experiment/data")
 
@@ -40,29 +41,36 @@ pairwise.adonis.dm <- function(x,factors,stratum=NULL,p.adjust.m="fdr",perm=999)
 
 
 load(file = "ps_clr_g50.RData") #renamed, clr transformed data
-load(file = "clr_no_rick.RData") #renamed, clr transformed data with no aquarickettsia
-sample_sums(clr)
+#load(file = "clr_no_rick.RData") #renamed, clr transformed data with no aquarickettsia
+sample_sums(clr) 
 
 mapfile = "Mapping-file-full-renamed.txt" #confirm correct mapping file associated
 map = import_qiime_sample_data(mapfile)
 sample_data(clr) <- map
-sample_data(clr_no_rick) <- map
+#sample_data(clr_no_rick) <- map
 levels(clr@sam_data$Nutrient_no_level) <- c("Ammonium", "Nitrate", "Phosphate", "Combined", "No Treatment", "T0")
 
+
+#clr <- subset_samples(clr, SampleID != "LP-50-2-T0") #outlier
+#clr_no_rick <- subset_samples(clr_no_rick, SampleID != "LP-50-2-T0") #outlier
 
 ### Calculate distance matrices
 # only calculating euclidean distance for clr transformed data because we have negative values, and with the clr transform we've moved our data into "real space"
 clr_euc <- phyloseq::distance(clr, method = "euclidean")
-
+euc_df <- melt(as.matrix(clr_euc), varnames = c("row", "col"))
+write.table(euc_df, file = "euclidean_dist.txt", sep = "\t")
 ### PERMANOVAs
 
-# PERMANOVA's with Adonis -  Permutational Multivariate Analasis of Variance
+# PERMANOVA's with Adonis -  Permutational Multivariate Analysis of Variance
 # Make a data frame from the sample_data
 sampledf <- data.frame(sample_data(clr))
+
 # Adonis 
 adonis(clr_euc ~ Nutrient_no_level*Level, data = sampledf) #sig, p = 0.001
 
-pairwise.adonis.dm(clr_euc, sample_data(clr)$Nutrient_no_level, p.adjust.m = "fdr")
+adonis(clr_euc ~ Nutrient_no_level, data = sampledf)
+xyz <- pairwise.adonis.dm(clr_euc, sample_data(clr)$Nutrient_no_level, p.adjust.m = "fdr")
+write.table(xyz, file = "Nutrient_no_level_stats.txt", sep = "\t")
 #comparisons against T0 significant, explore further. 
 
 pairwise.adonis.dm(clr_euc, sample_data(clr)$Exposure_weeks, p.adjust.m = "fdr")
@@ -74,32 +82,37 @@ pairwise.adonis.dm(clr_euc, sample_data(clr)$T0_merge, p.adjust.m = "fdr")
 pairwise.adonis.dm(clr_euc, sample_data(clr)$Nutrient, p.adjust.m = "fdr")
 #no comparison significant
 
-pairwise.adonis.dm(clr_euc, sample_data(clr)$No_level_weeks, p.adjust.m = "fdr")
+adonis(clr_euc ~ No_level_weeks, data = sampledf)
+jfk <- pairwise.adonis.dm(clr_euc, sample_data(clr)$No_level_weeks, p.adjust.m = "fdr")
+write.table(jfk, file = "No_level_weeks_stats.txt", sep = "\t")
 #T0 vs CTRL3 NS at p <0.01
 
-pairwise.adonis.dm(clr_euc, sample_data(clr)$Level, p.adjust.m = "fdr")
+abc <- pairwise.adonis.dm(clr_euc, sample_data(clr)$Level, p.adjust.m = "fdr")
+write.table(abc, file = "Level_stats.txt", sep = "\t")
+
 #0 vs H and vs L sig, NS H vs L
 
 ### PERMDISPR
 anova(betadisper(clr_euc, sampledf$Nutrient, bias.adjust = TRUE)) #NS
 anova(betadisper(clr_euc, sampledf$Nutrient_no_level, bias.adjust = TRUE)) #significant
-# Response: Distances
-# Df Sum Sq Mean Sq F value    Pr(>F)    
-# Groups      5 1779.7  355.95  11.548 2.225e-09 ***
-#   Residuals 143 4407.7   30.82  
+Response: Distances
+# Df Sum Sq Mean Sq F value         Pr(>F)    
+# Groups      5 1779.7  355.95  11.548 0.000000002225 ***
+#   Residuals 143 4407.7   30.82                           
+# 
 
 anova(betadisper(clr_euc, sampledf$Exposure_weeks, bias.adjust = TRUE)) #sig
 # Response: Distances
-# Df Sum Sq Mean Sq F value    Pr(>F)    
-# Groups      2 1269.1  634.55  20.074 1.986e-08 ***
-#   Residuals 146 4615.0   31.61                      
+# Df Sum Sq Mean Sq F value        Pr(>F)    
+# Groups      2 1269.1  634.55  20.074 0.00000001986 ***
+#   Residuals 146 4615.0   31.61                        
 # ---
 #   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 anova(betadisper(clr_euc, sampledf$No_level_weeks, bias.adjust = TRUE))
 # Response: Distances
-# Df Sum Sq Mean Sq F value    Pr(>F)    
-# Groups     10 1937.9 193.789  5.7772 3.153e-07 ***
+# Df Sum Sq Mean Sq F value       Pr(>F)    
+# Groups     10 1937.9 193.789  5.7772 0.0000003153 ***
 #   Residuals 138 4629.1  33.544                      
 # ---
 #   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
@@ -140,7 +153,7 @@ PCA <- phyloseq::plot_ordination(clr, ord_clr, type="samples", color="Nutrient_n
   labs(shape = "Exposure Weeks") +
   scale_color_manual(values = c("#BE0032", "#009E73","#F3C300","#848482","#0067A5", "#000000"))
 PCA
-ggsave(filename="~/Mote_nutrient_experiment/plots/PCA_clr.png", plot=PCA, device="png", dpi=700)
+ggsave(filename="~/Mote_nutrient_experiment/plots/PCA_clr.svg", plot=PCA, device="svg", height = 6, width = 6, dpi=700)
 
 adonis(clr_euc ~ Nutrient_no_level*Level, data = sampledf) 
 dispr <- betadisper(clr_euc, sampledf$Nutrient_no_level, bias.adjust = TRUE)
@@ -163,6 +176,8 @@ colnames(dispd)[1] <- "distance"
 
 anova(betadisper(clr_euc, sampledf$No_level_weeks, bias.adjust = TRUE)) #sig
 anova(betadisper(clr_euc, sampledf$Exposure_weeks, bias.adjust = TRUE)) #also sig
+anova(betadisper(clr_euc, sampledf$No_level_weeks_noT0, bias.adjust = TRUE)) #sig
+
 dispersion_stats <- p.adjust(permutest(betadisper(clr_euc, sampledf$No_level_weeks_noT0, 
                                                   bias.adjust = TRUE), 
                                        pairwise=TRUE)$pairwise$permuted, method = 'fdr')
@@ -189,7 +204,7 @@ dispersion_plot <- ggplot(dispd, aes(x=Exposure_weeks, y=distance)) +
         legend.position = c(0.85, 0.3)) +
   labs(color = "Exposure Weeks") +
   scale_colour_manual(values = myCols) +
-  stat_summary(geom = 'text', label = c("a","bcd","abc", "ab", "d", "c", "a", "abcd", "abc",  "ab", "abcd", "abcd","ab", "bcd", "cd"), fun.y = max, vjust = -0.5, size = 4) +
+  stat_summary(geom = 'text', label = c("a","bcd","abcd", "ab", "e", "cde", "a", "abcde", "abcd",  "ab", "abcde", "abcde","abc", "bcde", "de"), fun.y = max, vjust = -0.5, size = 4) +
   ggtitle("Dispersion Over Time, All Treatments") +
   scale_y_continuous(expand = expand_scale(mult = c(.1)))
 dispersion_plot
@@ -198,7 +213,6 @@ ggsave(filename="~/Mote_nutrient_experiment/plots/Dispersion_all_clr.png", plot=
 #Dispersion with Aquarickettsia removed
 load(file = "clr_no_rick.RData")
 sample_data(clr_no_rick) <- map
-clr_no_rick <- subset_samples(clr_no_rick, SampleID != "LP-50-2-T0")
 clr_euc <- phyloseq::distance(clr_no_rick, method = "euclidean")
 sampledf <- data.frame(sample_data(clr_no_rick))
 disp <- betadisper(clr_euc, sampledf$No_level_weeks, bias.adjust = TRUE)
@@ -232,7 +246,7 @@ no_rick_plot <- ggplot(dispd, aes(x=Exposure_weeks, y=distance)) +
         legend.position = c(0.85, 0.3)) +
   labs(color = "Exposure Weeks") +
   scale_colour_manual(values = myCols) +
-  stat_summary(geom = 'text', label = c("ab","ab","ab","ab","b","ab","ab","ab","ab","a","ab","ab","ab","ab","b"), fun.y = max, vjust = -0.5, size = 4) +
+  stat_summary(geom = 'text', label = c("a","a","a","a","a","a","a","a","a","a","a","a","a","a","a"), fun.y = max, vjust = -0.5, size = 4) +
   ggtitle("Dispersion Over Time, Aquarickettsia Removed") +
   scale_y_continuous(expand = expand_scale(mult = c(.1)))
 no_rick_plot
