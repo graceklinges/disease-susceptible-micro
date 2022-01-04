@@ -137,24 +137,6 @@ head(alphadiv)
 write.csv(alphadiv, file = "./alphadiv_5098_rare_geno50.csv")
 #write.csv(alphadiv, file = "./alphadiv_351_rare_geno50.csv")
 
-# # Observed
-observed1 <- data_summary(alphadiv, varname = "observed", groupnames = c("Exposure_weeks"))
-observed2 <- data_summary(alphadiv, varname = "observed", groupnames = c("NW_T0_merge"))
-observed3 <- data_summary(alphadiv, varname = "observed", groupnames = c("Nutrient_no_level"))
-observed4 <- data_summary(alphadiv, varname = "observed", groupnames = c("No_level_weeks_noT0"))
-
-# # Simpson
-simp1 <- data_summary(alphadiv, varname = "simpson", groupnames = c("Exposure_weeks"))
-simp2 <- data_summary(alphadiv, varname = "simpson", groupnames = c("NW_T0_merge"))
-simp3 <- data_summary(alphadiv, varname = "simpson", groupnames = c("Nutrient_no_level"))
-simp4 <- data_summary(alphadiv, varname = "simpson", groupnames = c("No_level_weeks_noT0"))
-
-# # Shannon
-shan1 <- data_summary(alphadiv, varname = "shannon", groupnames = c("Exposure_weeks"))
-shan2 <- data_summary(alphadiv, varname = "shannon", groupnames = c("NW_T0_merge"))
-shan3 <- data_summary(alphadiv, varname = "shannon", groupnames = c("Nutrient_no_level"))
-shan4 <- data_summary(alphadiv, varname = "shannon", groupnames = c("No_level_weeks_noT0"))
-
 # #Kruskal Wallis -- observed
 # kruskal.test(observed ~ Nutrient_geno, data = alphadiv)
 # kruskal.test(observed ~ Genotype, data = alphadiv)
@@ -186,12 +168,12 @@ KW_simpsons_No_level_weeks_noT0 <- pairwise.wilcox.test(alphadiv$simpson, alphad
 #All treatments significantly different from T0, supports NMDS plots
 KW_simpsons_T0_merge <- pairwise.wilcox.test(alphadiv$simpson, alphadiv$T0_merge, p.adjust.method = 'fdr')
 
-write.csv(KW_simpsons_Nutrient_no_level[["p.value"]], file = "KW_simpsons_Nutrient_no_level.csv")
-write.csv(KW_simpsons_NW_T0_merge[["p.value"]], file = "KW_simpsons_NW_T0_merge.csv")
-write.csv(KW_simpsons_T0_merge[["p.value"]], file = "KW_simpsons_T0_merge.csv")
+#write.csv(KW_simpsons_Nutrient_no_level[["p.value"]], file = "KW_simpsons_Nutrient_no_level.csv")
+#write.csv(KW_simpsons_NW_T0_merge[["p.value"]], file = "KW_simpsons_NW_T0_merge.csv")
+#write.csv(KW_simpsons_T0_merge[["p.value"]], file = "KW_simpsons_T0_merge.csv")
 write.csv(KW_simpsons_No_level_weeks_noT0[["p.value"]], file = "KW_simpsons_No_level_weeks_noT0.csv")
 
-
+#with rick removed
 write.csv(KW_simpsons_Nutrient_no_level[["p.value"]], file = "KW_simpsons_Nutrient_no_level_rick_rem.csv")
 write.csv(KW_simpsons_NW_T0_merge[["p.value"]], file = "KW_simpsons_NW_T0_merge_rick_rem.csv")
 write.csv(KW_simpsons_T0_merge[["p.value"]], file = "KW_simpsons_T0_merge_rick_rem.csv")
