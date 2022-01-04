@@ -1,0 +1,156 @@
+SampleID	Genotype	Phenotype	Rep	Nutrient	Exposure_weeks	Nutrient_weeks	Nutrient_geno	Nutrient_merged_geno	Tank	T0_merge	NW_T0_merge	Nutrient_order	Nutrient_no_level	Geno_weeks	No_level_no_T0	Level	No_level_weeks	No_level_weeks_noT0	outlier
+CTRL-50-4-T0	50	Susceptible	4	NT	0	NT0	50_T0	50_T0	CTRL-50-4	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+LC-50-1-T0	50	Susceptible	1	NT	0	NT0	50_T0	50_T0	LC-50-1	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+CTRL-50-2-T0	50	Susceptible	2	NT	3	NT3	50_NT	50_NT	CTRL-50-2	NT	NT3	1	No Treatment	50_3	No Treatment	0	NT3	NT3	N
+CTRL-50-4-TX	50	Susceptible	4	NT	3	NT3	50_NT	50_NT	CTRL-50-4	NT	NT3	1	No Treatment	50_3	No Treatment	0	NT3	NT3	N
+CTRL-50-3-TM	50	Susceptible	3	NT	3	NT3	50_NT	50_NT	CTRL-50-3	NT	NT3	1	No Treatment	50_3	No Treatment	0	NT3	NT3	N
+CTRL-50-4-TM	50	Susceptible	4	NT	3	NT3	50_NT	50_NT	CTRL-50-4	NT	NT3	1	No Treatment	50_3	No Treatment	0	NT3	NT3	N
+CTRL-50-4-TE	50	Susceptible	4	NT	6	NT6	50_NT	50_NT	CTRL-50-4	NT	NT6	1	No Treatment	50_6	No Treatment	0	NT6	NT6	N
+CTRL-50-3-TE	50	Susceptible	3	NT	6	NT6	50_NT	50_NT	CTRL-50-3	NT	NT6	1	No Treatment	50_6	No Treatment	0	NT6	NT6	N
+CTRL-50-3-TX	50	Susceptible	3	NT	6	NT6	50_NT	50_NT	CTRL-50-3	NT	NT6	1	No Treatment	50_6	No Treatment	0	NT6	NT6	N
+LA-50-3-T0	50	Susceptible	3	HA	0	HA0	50_T0	50_T0	LA-50-3	T0	T0	7	T0	50_0	Ammonium	0	T0	A0	N
+HA-50-3-T3	50	Susceptible	3	HA	6	HA6	50_HA	50_A	HA-50-3	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+LA-50-3-T4	50	Susceptible	3	HA	6	HA6	50_HA	50_A	LA-50-3	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+MA-50-2-T0	50	Susceptible	2	LA	0	LA0	50_T0	50_T0	MA-50-2	T0	T0	6	T0	50_0	Ammonium	0	T0	A0	N
+MA-50-1-T0	50	Susceptible	1	LA	0	LA0	50_T0	50_T0	MA-50-1	T0	T0	6	T0	50_0	Ammonium	0	T0	A0	N
+MA-50-1-T1	50	Susceptible	1	LA	3	LA3	50_LA	50_A	MA-50-1	LA	LA3	6	Ammonium	50_3	Ammonium	L	A3	A3	N
+MA-50-3-T2	50	Susceptible	3	LA	3	LA3	50_LA	50_A	MA-50-3	LA	LA3	6	Ammonium	50_3	Ammonium	L	A3	A3	N
+MA-50-3-T1	50	Susceptible	3	LA	3	LA3	50_LA	50_A	MA-50-3	LA	LA3	6	Ammonium	50_3	Ammonium	L	A3	A3	N
+MA-50-1-T4	50	Susceptible	1	LA	6	LA6	50_LA	50_A	MA-50-1	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+MA-50-2-T2	50	Susceptible	2	LA	6	LA6	50_LA	50_A	MA-50-2	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+LN-50-3-T0	50	Susceptible	3	HN	0	HN0	50_T0	50_T0	LN-50-3	T0	T0	5	T0	50_0	Nitrate	0	T0	N0	N
+HN-50-3-T0	50	Susceptible	3	HN	0	HN0	50_T0	50_T0	HN-50-3	T0	T0	5	T0	50_0	Nitrate	0	T0	N0	N
+HN-50-1-T0	50	Susceptible	1	HN	0	HN0	50_T0	50_T0	HN-50-1	T0	T0	5	T0	50_0	Nitrate	0	T0	N0	N
+HN-50-3-T4	50	Susceptible	3	HN	6	HN6	50_HN	50_N	HN-50-3	HN	HN6	5	Nitrate	50_6	Nitrate	H	N6	N6	N
+LN-50-3-T2	50	Susceptible	3	HN	6	HN6	50_HN	50_N	LN-50-3	HN	HN6	5	Nitrate	50_6	Nitrate	H	N6	N6	N
+LN-50-2-T0	50	Susceptible	2	LN	0	LN0	50_T0	50_T0	LN-50-2	T0	T0	4	T0	50_0	Nitrate	0	T0	N0	N
+MN-50-3-T0	50	Susceptible	3	LN	0	LN0	50_T0	50_T0	MN-50-3	T0	T0	4	T0	50_0	Nitrate	0	T0	N0	N
+MN-50-1-T2	50	Susceptible	1	LN	3	LN3	50_LN	50_N	MN-50-1	LN	LN3	4	Nitrate	50_3	Nitrate	L	N3	N3	N
+MN-50-3-T2	50	Susceptible	3	LN	6	LN6	50_LN	50_N	MN-50-3	LN	LN6	4	Nitrate	50_6	Nitrate	L	N6	N6	N
+HC-50-2-T0	50	Susceptible	2	HC	0	HC0	50_T0	50_T0	HC-50-2	T0	T0	9	T0	50_0	Combined	0	T0	C0	N
+HC-50-1-TM	50	Susceptible	1	HC	3	HC3	50_HC	50_C	HC-50-1	HC	HC3	9	Combined	50_3	Combined	H	C3	C3	N
+HC-50-2-TM	50	Susceptible	2	HC	3	HC3	50_HC	50_C	HC-50-2	HC	HC3	9	Combined	50_3	Combined	H	C3	C3	N
+HC-50-3-TX	50	Susceptible	3	HC	3	HC3	50_HC	50_C	HC-50-3	HC	HC3	9	Combined	50_3	Combined	H	C3	C3	N
+HC-50-3-TM	50	Susceptible	3	HC	3	HC3	50_HC	50_C	HC-50-3	HC	HC3	9	Combined	50_3	Combined	H	C3	C3	N
+HC-50-2-TE	50	Susceptible	2	HC	6	HC6	50_HC	50_C	HC-50-2	HC	HC6	9	Combined	50_6	Combined	H	C6	C6	N
+HC-50-3-TE	50	Susceptible	3	HC	6	HC6	50_HC	50_C	HC-50-3	HC	HC6	9	Combined	50_6	Combined	H	C6	C6	N
+HC-50-2-TX	50	Susceptible	2	HC	6	HC6	50_HC	50_C	HC-50-2	HC	HC6	9	Combined	50_6	Combined	H	C6	C6	N
+HC-50-1-TE	50	Susceptible	1	HC	6	HC6	50_HC	50_C	HC-50-1	HC	HC6	9	Combined	50_6	Combined	H	C6	C6	N
+MC-50-3-T0	50	Susceptible	3	LC	0	LC0	50_T0	50_T0	MC-50-3	T0	T0	8	T0	50_0	Combined	0	T0	C0	N
+MC-50-2-T0	50	Susceptible	2	LC	0	LC0	50_T0	50_T0	MC-50-2	T0	T0	8	T0	50_0	Combined	0	T0	C0	N
+MC-50-3-TX	50	Susceptible	3	LC	3	LC3	50_LC	50_C	MC-50-3	LC	LC3	8	Combined	50_3	Combined	L	C3	C3	N
+MC-50-1-TM	50	Susceptible	1	LC	3	LC3	50_LC	50_C	MC-50-1	LC	LC3	8	Combined	50_3	Combined	L	C3	C3	N
+MC-50-3-TM	50	Susceptible	3	LC	3	LC3	50_LC	50_C	MC-50-3	LC	LC3	8	Combined	50_3	Combined	L	C3	C3	N
+MC-50-2-TM	50	Susceptible	2	LC	3	LC3	50_LC	50_C	MC-50-2	LC	LC3	8	Combined	50_3	Combined	L	C3	C3	N
+MC-50-1-TE	50	Susceptible	1	LC	6	LC6	50_LC	50_C	MC-50-1	LC	LC6	8	Combined	50_6	Combined	L	C6	C6	N
+MC-50-2-TX	50	Susceptible	2	LC	6	LC6	50_LC	50_C	MC-50-2	LC	LC6	8	Combined	50_6	Combined	L	C6	C6	N
+MC-50-2-TE	50	Susceptible	2	LC	6	LC6	50_LC	50_C	MC-50-2	LC	LC6	8	Combined	50_6	Combined	L	C6	C6	N
+MC-50-1-TX	50	Susceptible	1	LC	6	LC6	50_LC	50_C	MC-50-1	LC	LC6	8	Combined	50_6	Combined	L	C6	C6	N
+HP-50-3-T0	50	Susceptible	3	HP	0	HP0	50_T0	50_T0	HP-50-3	T0	T0	3	T0	50_0	Phosphate	0	T0	P0	N
+HP-50-2-T0	50	Susceptible	2	HP	0	HP0	50_T0	50_T0	HP-50-2	T0	T0	3	T0	50_0	Phosphate	0	T0	P0	N
+HP-50-3-TX	50	Susceptible	3	HP	3	HP3	50_HP	50_P	HP-50-3	HP	HP3	3	Phosphate	50_3	Phosphate	H	P3	P3	N
+HP-50-1-TM	50	Susceptible	1	HP	3	HP3	50_HP	50_P	HP-50-1	HP	HP3	3	Phosphate	50_3	Phosphate	H	P3	P3	N
+HP-50-3-TM	50	Susceptible	3	HP	3	HP3	50_HP	50_P	HP-50-3	HP	HP3	3	Phosphate	50_3	Phosphate	H	P3	P3	N
+HP-50-2-TM	50	Susceptible	2	HP	6	HP6	50_HP	50_P	HP-50-2	HP	HP6	3	Phosphate	50_6	Phosphate	H	P6	P6	N
+HP-50-1-TE	50	Susceptible	1	HP	6	HP6	50_HP	50_P	HP-50-1	HP	HP6	3	Phosphate	50_6	Phosphate	H	P6	P6	N
+HP-50-3-TE	50	Susceptible	3	HP	6	HP6	50_HP	50_P	HP-50-3	HP	HP6	3	Phosphate	50_6	Phosphate	H	P6	P6	N
+MP-50-3-T0	50	Susceptible	3	LP	0	LP0	50_T0	50_T0	MP-50-3	T0	T0	2	T0	50_0	Phosphate	0	T0	P0	N
+MP-50-2-T0	50	Susceptible	2	LP	0	LP0	50_T0	50_T0	MP-50-2	T0	T0	2	T0	50_0	Phosphate	0	T0	P0	N
+MP-50-1-T0	50	Susceptible	1	LP	0	LP0	50_T0	50_T0	MP-50-1	T0	T0	2	T0	50_0	Phosphate	0	T0	P0	N
+MP-50-2-TM	50	Susceptible	2	LP	3	LP3	50_LP	50_P	MP-50-2	LP	LP3	2	Phosphate	50_3	Phosphate	L	P3	P3	N
+MP-50-3-TM	50	Susceptible	3	LP	3	LP3	50_LP	50_P	MP-50-3	LP	LP3	2	Phosphate	50_3	Phosphate	L	P3	P3	N
+MP-50-3-TX	50	Susceptible	3	LP	3	LP3	50_LP	50_P	MP-50-3	LP	LP3	2	Phosphate	50_3	Phosphate	L	P3	P3	N
+MP-50-1-TM	50	Susceptible	1	LP	3	LP3	50_LP	50_P	MP-50-1	LP	LP3	2	Phosphate	50_3	Phosphate	L	P3	P3	N
+MP-50-2-TE	50	Susceptible	2	LP	6	LP6	50_LP	50_P	MP-50-2	LP	LP6	2	Phosphate	50_6	Phosphate	L	P6	P6	N
+MP-50-3-TE	50	Susceptible	3	LP	6	LP6	50_LP	50_P	MP-50-3	LP	LP6	2	Phosphate	50_6	Phosphate	L	P6	P6	N
+MP-50-2-TX	50	Susceptible	2	LP	6	LP6	50_LP	50_P	MP-50-2	LP	LP6	2	Phosphate	50_6	Phosphate	L	P6	P6	N
+MP-50-1-TE	50	Susceptible	1	LP	6	LP6	50_LP	50_P	MP-50-1	LP	LP6	2	Phosphate	50_6	Phosphate	L	P6	P6	N
+LP-50-3-T0	50	Susceptible	3	HP	0	HP0	50_T0	50_T0	LP-50-3	T0	T0	3	T0	50_0	Phosphate	0	T0	P0	N
+HA-50-2-T0	50	Susceptible	2	HA	0	HA0	50_T0	50_T0	HA-50-2	T0	T0	7	T0	50_0	Ammonium	0	T0	A0	N
+MC-50-1-T0	50	Susceptible	1	LC	0	LC0	50_T0	50_T0	MC-50-1	T0	T0	8	T0	50_0	Combined	0	T0	C0	N
+MA-50-3-T0	50	Susceptible	3	LA	0	LA0	50_T0	50_T0	MA-50-3	T0	T0	6	T0	50_0	Ammonium	0	T0	A0	N
+HC-50-3-T0	50	Susceptible	3	HC	0	HC0	50_T0	50_T0	HC-50-3	T0	T0	9	T0	50_0	Combined	0	T0	C0	N
+HC-50-1-T0	50	Susceptible	1	HC	0	HC0	50_T0	50_T0	HC-50-1	T0	T0	9	T0	50_0	Combined	0	T0	C0	N
+HA-50-3-T0	50	Susceptible	3	HA	0	HA0	50_T0	50_T0	HA-50-3	T0	T0	7	T0	50_0	Ammonium	0	T0	A0	N
+LA-50-1-T0	50	Susceptible	1	NT	0	NT0	50_T0	50_T0	LA-50-1	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+LP-50-2-T0	50	Susceptible	2	LP	0	LP0	50_T0	50_T0	LP-50-2	T0	T0	2	T0	50_0	Phosphate	0	T0	P0	N
+HN-50-2-T0	50	Susceptible	2	HN	0	HN0	50_T0	50_T0	HN-50-2	T0	T0	5	T0	50_0	Nitrate	0	T0	N0	N
+LN-50-3-T1	50	Susceptible	3	HN	3	HN3	50_HN	50_N	LN-50-3	HN	HN3	5	Nitrate	50_3	Nitrate	H	N3	N3	N
+LA-50-1-T2	50	Susceptible	1	NT	3	NT3	50_NT	50_NT	LA-50-1	NT	NT3	1	No Treatment	50_3	No Treatment	0	NT3	NT3	N
+CTRL-50-4-TB	50	Susceptible	4	NT	0	NT0	50_T0	50_T0	CTRL-50-4	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+CTRL-50-3-TB	50	Susceptible	3	NT	0	NT0	50_T0	50_T0	CTRL-50-3	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+LP-50-1-T0	50	Susceptible	1	NT	0	NT0	50_T0	50_T0	LP-50-1	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+CTRL-50-1-T0	50	Susceptible	1	NT	0	NT0	50_T0	50_T0	CTRL-50-1	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+CTRL-50-3-T0	50	Susceptible	3	NT	0	NT0	50_T0	50_T0	CTRL-50-3	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+CTRL-50-2-T0-2	50	Susceptible	2	NT	3	NT3	50_NT	50_NT	CTRL-50-2	NT	NT3	1	No Treatment	50_3	No Treatment	0	NT3	NT3	N
+LA-50-1-T1	50	Susceptible	1	NT	3	NT3	50_NT	50_NT	LA-50-1	NT	NT3	1	No Treatment	50_3	No Treatment	0	NT3	NT3	N
+LA-50-1-T3	50	Susceptible	1	NT	6	NT6	50_NT	50_NT	LA-50-1	NT	NT6	1	No Treatment	50_6	No Treatment	0	NT6	NT6	N
+LA-50-1-T4	50	Susceptible	1	NT	6	NT6	50_NT	50_NT	LA-50-1	NT	NT6	1	No Treatment	50_6	No Treatment	0	NT6	NT6	N
+LN-50-1-T0	50	Susceptible	1	NT	0	NT0	50_T0	50_T0	LN-50-1	T0	T0	1	T0	50_0	No Treatment	0	T0	NT0	N
+HA-50-3-T1	50	Susceptible	3	HA	3	HA3	50_HA	50_A	HA-50-3	HA	HA3	7	Ammonium	50_3	Ammonium	H	A3	A3	N
+HA-50-1-T4	50	Susceptible	1	HA	6	HA6	50_HA	50_A	HA-50-1	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+HA-50-3-T4	50	Susceptible	3	HA	6	HA6	50_HA	50_A	HA-50-3	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+HA-50-1-T0	50	Susceptible	1	HA	0	HA0	50_T0	50_T0	HA-50-1	T0	T0	7	T0	50_0	Ammonium	0	T0	A0	N
+HA-50-1-T1	50	Susceptible	1	HA	3	HA3	50_HA	50_A	HA-50-1	HA	HA3	7	Ammonium	50_3	Ammonium	H	A3	A3	N
+HA-50-2-T1	50	Susceptible	2	HA	3	HA3	50_HA	50_A	HA-50-2	HA	HA3	7	Ammonium	50_3	Ammonium	H	A3	A3	N
+HA-50-2-T2	50	Susceptible	2	HA	6	HA6	50_HA	50_A	HA-50-2	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+HA-50-3-T2	50	Susceptible	3	HA	3	HA3	50_HA	50_A	HA-50-3	HA	HA3	7	Ammonium	50_3	Ammonium	H	A3	A3	N
+LA-50-3-T3	50	Susceptible	3	HA	3	HA3	50_HA	50_A	LA-50-3	HA	HA3	7	Ammonium	50_3	Ammonium	H	A3	A3	N
+HA-50-2-T3	50	Susceptible	2	HA	6	HA6	50_HA	50_A	HA-50-2	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+HA-50-1-T4-2	50	Susceptible	1	HA	6	HA6	50_HA	50_A	HA-50-1	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+HA-50-2-T4	50	Susceptible	2	HA	6	HA6	50_HA	50_A	HA-50-2	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+HA-50-1-T2	50	Susceptible	1	HA	6	HA6	50_HA	50_A	HA-50-1	HA	HA6	7	Ammonium	50_6	Ammonium	H	A6	A6	N
+HC-50-3-TB	50	Susceptible	3	HC	0	HC0	50_T0	50_T0	HC-50-3	T0	T0	9	T0	50_0	Combined	0	T0	C0	N
+HC-50-1-TB	50	Susceptible	1	HC	0	HC0	50_T0	50_T0	HC-50-1	T0	T0	9	T0	50_0	Combined	0	T0	C0	N
+HC-50-2-TB	50	Susceptible	2	HC	0	HC0	50_T0	50_T0	HC-50-2	T0	T0	9	T0	50_0	Combined	0	T0	C0	N
+LC-50-3-T0	50	Susceptible	3	HC	0	HC0	50_T0	50_T0	LC-50-3	T0	T0	9	T0	50_0	Combined	0	T0	C0	N
+HC-50-1-TX	50	Susceptible	1	HC	6	HC6	50_HC	50_C	HC-50-1	HC	HC6	9	Combined	50_6	Combined	H	C6	C6	N
+HN-50-2-T1	50	Susceptible	2	HN	6	HN6	50_HN	50_N	HN-50-2	HN	HN6	5	Nitrate	50_6	Nitrate	H	N6	N6	N
+HN-50-1-T1	50	Susceptible	1	HN	3	HN3	50_HN	50_N	HN-50-1	HN	HN3	5	Nitrate	50_3	Nitrate	H	N3	N3	N
+HN-50-3-T1	50	Susceptible	3	HN	3	HN3	50_HN	50_N	HN-50-3	HN	HN3	5	Nitrate	50_3	Nitrate	H	N3	N3	N
+HN-50-1-T2	50	Susceptible	1	HN	3	HN3	50_HN	50_N	HN-50-1	HN	HN3	5	Nitrate	50_3	Nitrate	H	N3	N3	N
+HN-50-2-T3	50	Susceptible	2	HN	3	HN3	50_HN	50_N	HN-50-2	HN	HN3	5	Nitrate	50_3	Nitrate	H	N3	N3	N
+HN-50-1-T3	50	Susceptible	1	HN	6	HN6	50_HN	50_N	HN-50-1	HN	HN6	5	Nitrate	50_6	Nitrate	H	N6	N6	N
+LN-50-3-T3	50	Susceptible	3	HN	6	HN6	50_HN	50_N	LN-50-3	HN	HN6	5	Nitrate	50_6	Nitrate	H	N6	N6	N
+HN-50-1-T4	50	Susceptible	1	HN	6	HN6	50_HN	50_N	HN-50-1	HN	HN6	5	Nitrate	50_6	Nitrate	H	N6	N6	N
+HN-50-3-T2	50	Susceptible	3	HN	6	HN6	50_HN	50_N	HN-50-3	HN	HN6	5	Nitrate	50_6	Nitrate	H	N6	N6	N
+HP-50-3-TB	50	Susceptible	3	HP	0	HP0	50_T0	50_T0	HP-50-3	T0	T0	3	T0	50_0	Phosphate	0	T0	P0	N
+HP-50-1-TB	50	Susceptible	1	HP	0	HP0	50_T0	50_T0	HP-50-1	T0	T0	3	T0	50_0	Phosphate	0	T0	P0	N
+HP-50-2-TB	50	Susceptible	2	HP	0	HP0	50_T0	50_T0	HP-50-2	T0	T0	3	T0	50_0	Phosphate	0	T0	P0	N
+HP-50-2-TE	50	Susceptible	2	HP	6	HP6	50_HP	50_P	HP-50-2	HP	HP6	3	Phosphate	50_6	Phosphate	H	P6	P6	N
+HP-50-1-T0	50	Susceptible	1	HP	0	HP0	50_T0	50_T0	HP-50-1	T0	T0	3	T0	50_0	Phosphate	0	T0	P0	N
+HP-50-1-TX	50	Susceptible	1	HP	6	HP6	50_HP	50_P	HP-50-1	HP	HP6	3	Phosphate	50_6	Phosphate	H	P6	P6	N
+HP-50-2-TX	50	Susceptible	2	HP	6	HP6	50_HP	50_P	HP-50-2	HP	HP6	3	Phosphate	50_6	Phosphate	H	P6	P6	N
+MA-50-2-T1	50	Susceptible	2	LA	3	LA3	50_LA	50_A	MA-50-2	LA	LA3	6	Ammonium	50_3	Ammonium	L	A3	A3	N
+MA-50-3-T3	50	Susceptible	3	LA	3	LA3	50_LA	50_A	MA-50-3	LA	LA3	6	Ammonium	50_3	Ammonium	L	A3	A3	N
+LA-50-2-T0	50	Susceptible	2	LA	0	LA0	50_T0	50_T0	LA-50-2	T0	T0	6	T0	50_0	Ammonium	0	T0	A0	N
+LA-50-2-T1	50	Susceptible	2	LA	6	LA6	50_LA	50_A	LA-50-2	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+MA-50-1-T2	50	Susceptible	1	LA	6	LA6	50_LA	50_A	MA-50-1	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+LA-50-2-T2	50	Susceptible	2	LA	6	LA6	50_LA	50_A	LA-50-2	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+MA-50-1-T3	50	Susceptible	1	LA	6	LA6	50_LA	50_A	MA-50-1	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+LA-50-2-T3	50	Susceptible	2	LA	6	LA6	50_LA	50_A	LA-50-2	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+MA-50-3-T4	50	Susceptible	3	LA	6	LA6	50_LA	50_A	MA-50-3	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+MA-50-2-T4	50	Susceptible	2	LA	6	LA6	50_LA	50_A	MA-50-2	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+LA-50-2-T4	50	Susceptible	2	LA	6	LA6	50_LA	50_A	LA-50-2	LA	LA6	6	Ammonium	50_6	Ammonium	L	A6	A6	N
+MC-50-1-TB	50	Susceptible	1	LC	0	LC0	50_T0	50_T0	MC-50-1	T0	T0	8	T0	50_0	Combined	0	T0	C0	N
+MC-50-3-TB	50	Susceptible	3	LC	0	LC0	50_T0	50_T0	MC-50-3	T0	T0	8	T0	50_0	Combined	0	T0	C0	N
+MC-50-2-TB	50	Susceptible	2	LC	0	LC0	50_T0	50_T0	MC-50-2	T0	T0	8	T0	50_0	Combined	0	T0	C0	N
+MC-50-3-TE	50	Susceptible	3	LC	6	LC6	50_LC	50_C	MC-50-3	LC	LC6	8	Combined	50_6	Combined	L	C6	C6	N
+LC-50-2-T0	50	Susceptible	2	LC	0	LC0	50_T0	50_T0	LC-50-2	T0	T0	8	T0	50_0	Combined	0	T0	C0	N
+LN-50-2-T1	50	Susceptible	2	LN	3	LN3	50_LN	50_N	LN-50-2	LN	LN3	4	Nitrate	50_3	Nitrate	L	N3	N3	N
+MN-50-3-T2-2	50	Susceptible	3	LN	6	LN6	50_LN	50_N	MN-50-3	LN	LN6	4	Nitrate	50_6	Nitrate	L	N6	N6	N
+MN-50-1-T4	50	Susceptible	1	LN	6	LN6	50_LN	50_N	MN-50-1	LN	LN6	4	Nitrate	50_6	Nitrate	L	N6	N6	N
+LN-50-2-T4	50	Susceptible	2	LN	6	LN6	50_LN	50_N	LN-50-2	LN	LN6	4	Nitrate	50_6	Nitrate	L	N6	N6	N
+MN-50-1-T0	50	Susceptible	1	LN	0	LN0	50_T0	50_T0	MN-50-1	T0	T0	4	T0	50_0	Nitrate	0	T0	N0	N
+MN-50-2-T0	50	Susceptible	2	LN	0	LN0	50_T0	50_T0	MN-50-2	T0	T0	4	T0	50_0	Nitrate	0	T0	N0	N
+MN-50-3-T1	50	Susceptible	3	LN	3	LN3	50_LN	50_N	MN-50-3	LN	LN3	4	Nitrate	50_3	Nitrate	L	N3	N3	N
+MN-50-1-T1	50	Susceptible	1	LN	3	LN3	50_LN	50_N	MN-50-1	LN	LN3	4	Nitrate	50_3	Nitrate	L	N3	N3	N
+LN-50-2-T2	50	Susceptible	2	LN	3	LN3	50_LN	50_N	LN-50-2	LN	LN3	4	Nitrate	50_3	Nitrate	L	N3	N3	N
+MN-50-2-T2	50	Susceptible	2	LN	6	LN6	50_LN	50_N	MN-50-2	LN	LN6	4	Nitrate	50_6	Nitrate	L	N6	N6	N
+MN-50-1-T3	50	Susceptible	1	LN	6	LN6	50_LN	50_N	MN-50-1	LN	LN6	4	Nitrate	50_6	Nitrate	L	N6	N6	N
+MN-50-2-T4	50	Susceptible	2	LN	6	LN6	50_LN	50_N	MN-50-2	LN	LN6	4	Nitrate	50_6	Nitrate	L	N6	N6	N
+LN-50-2-T3	50	Susceptible	2	LN	6	LN6	50_LN	50_N	LN-50-2	LN	LN6	4	Nitrate	50_6	Nitrate	L	N6	N6	N
+MP-50-2-TB	50	Susceptible	2	LP	0	LP0	50_T0	50_T0	MP-50-2	T0	T0	2	T0	50_0	Phosphate	0	T0	P0	N
+MP-50-3-TB	50	Susceptible	3	LP	0	LP0	50_T0	50_T0	MP-50-3	T0	T0	2	T0	50_0	Phosphate	0	T0	P0	N
+MP-50-1-TB	50	Susceptible	1	LP	0	LP0	50_T0	50_T0	MP-50-1	T0	T0	2	T0	50_0	Phosphate	0	T0	P0	N
+Negative	NA	NA	NA	NA	NA	NA	NA_NA	NA_NA	NA	NA	NA	NA	NA	NA_NA	NA	NA	NA	NA	N
